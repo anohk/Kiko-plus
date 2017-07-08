@@ -17,10 +17,10 @@ Django 문서를 뒤져보니 [humanize](https://docs.djangoproject.com/en/1.11/
 
 ## 1. Code layout
 
-### **models.py**, **views.py** 등의 파일과 같은 위계에 **templatetags** 디렉토리를 생성한다.  
+### 1-1. models.py, views.py 등의 파일과 같은 위계에 templatetags 디렉토리를 생성한다.  
 > **templatetags** 디렉토리를 Python package로 취급할 수 있도록 **__init__.py** 파일을 포함해야한다. 
 
-### **templatetags** 패키지 내부에 커스텀 태그 혹은 필터 파일을 생성한다. 
+### 1-2. templatetags 패키지 내부에 커스텀 태그 혹은 필터 파일을 생성한다. 
 
 ```
 product/
@@ -38,7 +38,7 @@ product/
 ```python
 {{ "{% load add " }}%}
 ```
-### 유효한 라이브러리로 만들기
+### 1-3. 유효한 라이브러리로 만들기
 작성할 모듈이 라이브러리로 동작하려면 아래와 같이 `register` 라는 모듈 레벨의 변수를 포함해야한다. 
 아래와 같이 모듈 파일의 상단에 해당 변수를 포함시켜준다.
 
