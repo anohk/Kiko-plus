@@ -33,7 +33,7 @@ product/
 		add.py
 ```
 
-아래와 같이 **{% load %}** 태그가 동작하기 위해서는 **templatetags** 패키지를 포함하고 있는 앱이 **INSTALLED_APPS** 에 설정되어 있어야 한다.  
+아래와 같이 `{% load %}` 태그가 동작하기 위해서는 **templatetags** 패키지를 포함하고 있는 앱이 **INSTALLED_APPS** 에 설정되어 있어야 한다.  
 **templatetags** 패키지에 여러개의 모듈을 생성하여 사용할 수 있으며, `{% load %}` syntax에는 앱 이름이 아닌 모듈 이름을 사용한다. 
 
 ```python
