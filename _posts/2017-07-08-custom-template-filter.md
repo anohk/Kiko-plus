@@ -8,7 +8,6 @@ comments: true
 share: true
 ---
 
-> [Custom template tags and filters](https://docs.djangoproject.com/en/1.11/howto/custom-template-tags/) 문서 참조
 
 Django admin 페이지에서 데이터를 표시하는 방법을 커스텀해야할 일이 생겼다. 숫자 데이터의 가독성을 높이기 위해 천 단위로 `,` 를 적용하는 일이다. 
 
@@ -63,7 +62,6 @@ def add_comma(value):
 이렇게 정의된 모듈은 템플릿에서 다음과 같이 사용될  것이다.
 
 ```python
-
 {{ "{% load " }}%}
 ...
 ...
@@ -98,3 +96,6 @@ def add_comma(value):
 	return '{:,}'.format(value)
 ```
 두 번째 처럼 name 인자에 아무것도 넘기지 않으면 Django는 함수의 이름을 필터 이름으로 사용한다. 
+
+
+> [Custom template tags and filters](https://docs.djangoproject.com/en/1.11/howto/custom-template-tags/) 문서 참조
