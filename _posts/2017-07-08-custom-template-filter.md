@@ -18,7 +18,7 @@ Django 문서를 뒤져보니 [humanize](https://docs.djangoproject.com/en/1.11/
 ## 1. Code layout
 
 ### 1-1. models.py, views.py 등의 파일과 같은 위계에 templatetags 디렉토리를 생성한다.  
-> **templatetags** 디렉토리를 Python package로 취급할 수 있도록 **__init__.py** 파일을 포함해야한다. 
+**templatetags** 디렉토리를 Python package로 취급할 수 있도록 **__init__.py** 파일을 포함해야한다. 
 
 ### 1-2. templatetags 패키지 내부에 커스텀 태그 혹은 필터 파일을 생성한다. 
 
@@ -47,7 +47,7 @@ from django import template
 
 register = template.Library()
 ```
-> **register** : 모든 태그와 필터가 등록되어있는 **template.Library** 의 인스턴스이다. 
+**register** : 모든 태그와 필터가 등록되어있는 **template.Library** 의 인스턴스이다. 
 
 
 
@@ -68,7 +68,7 @@ def add_comma(value):
 {{ "{{ somevariable|add_comma " }}}}
 ```
 
-> `{:,}` 은 천 단위로 구분점을 찍는 [Format String Syntax](https://docs.python.org/2/library/string.html#grammar-token-format_spec)이다.  
+`{:,}` 은 천 단위로 구분점을 찍는 [Format String Syntax](https://docs.python.org/2/library/string.html#grammar-token-format_spec)이다.  
  
 ## 3. 커스텀 필터 등록하기
 커스텀 필터를 정의했다면, Django의 템플릿 언어에서 사용할 수 있도록 Library 인스턴스에 등록을 해야한다. 
