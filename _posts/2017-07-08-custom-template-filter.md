@@ -33,11 +33,11 @@ product/
 		add.py
 ```
 
-아래와 같이 `load` 태그가 동작하기 위해서는 **templatetags** 패키지를 포함하고 있는 앱이 **INSTALLED_APPS** 에 설정되어 있어야 한다.  
-**templatetags** 패키지에 여러개의 모듈을 생성하여 사용할 수 있으며, `load` syntax에는 앱 이름이 아닌 모듈 이름을 사용한다. 
+아래와 같이 `{{ "{% load " }}%}` 태그가 동작하기 위해서는 **templatetags** 패키지를 포함하고 있는 앱이 **INSTALLED_APPS** 에 설정되어 있어야 한다.  
+**templatetags** 패키지에 여러개의 모듈을 생성하여 사용할 수 있으며, `{{ "{% load " }}%}` syntax에는 앱 이름이 아닌 모듈 이름을 사용한다. 
 
 ```python
-load add
+{{ "{% load add " }}%}
 ```
 ### 유효한 라이브러리로 만들기
 작성할 모듈이 라이브러리로 동작하려면 아래와 같이 `register` 라는 모듈 레벨의 변수를 포함해야한다. 
@@ -63,7 +63,8 @@ def add_comma(value):
 이렇게 정의된 모듈은 템플릿에서 다음과 같이 사용될  것이다.
 
 ```python
-load add
+
+{{ "{% load " }}%}
 ...
 ...
 {{ somevariable|add_comma }}
