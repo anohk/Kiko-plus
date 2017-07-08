@@ -67,7 +67,7 @@ def add_comma(value):
 {{ "{% load " }}%}
 ...
 ...
-{{ somevariable|add_comma }}
+{{ "{{ somevariable|add_comma " }}}}
 ```
 
 > `{:,}` 은 천 단위로 구분점을 찍는 [Format String Syntax](https://docs.python.org/2/library/string.html#grammar-token-format_spec)이다.  
