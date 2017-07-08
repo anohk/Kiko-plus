@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "[Django] Custom template tags and filters"
+title: "Custom template filter"
+description: "장고 템플릿 필터를 만들어보자"
 date: 2017-07-08
-tags: [Django, template]
+tags: [Django]
 comments: true
 share: true
 ---
-
 
 > [Custom template tags and filters](https://docs.djangoproject.com/en/1.11/howto/custom-template-tags/) 문서 참조
 
