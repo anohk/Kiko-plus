@@ -62,7 +62,7 @@ def add_comma(value):
 이렇게 정의된 모듈은 템플릿에서 다음과 같이 사용될  것이다.
 
 ```python
-{{ "{% load " }}%}
+{{ "{% load add " }}%}
 ...
 ...
 {{ "{{ somevariable|add_comma " }}}}
