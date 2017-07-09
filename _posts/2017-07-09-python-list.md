@@ -188,7 +188,76 @@ offset의 값을 모른다면, `remove()`를 사용하여 해당 요소를 삭�
 ['lemon', 'oak']
 ```
 
+## 6. EXTRA
+### index()
+값을 알고 있으면 해당 값의 위치를 찾을 수 있다. 
 
+```python
+>>> aroma = ['lemon', 'cherry', 'oak']
+>>> aroma.index('cherry')
+1
+```
+
+### in
+리스트에 값의 존재 여부를 확인할 수 있다.
+
+```python
+>>> aroma = ['lemon', 'cherry', 'oak']
+>>> 'oak' in aroma
+True
+>>> 'leather' in aroma
+False
+```
+
+
+### count()
+특정한 값이 리스트에 얼마나 있는지 셀 수 있다.
+
+```python
+>>> aroma = ['lemon', 'cherry', 'oak', 'lemon']
+>>> aroma.count('lemon')
+2
+>>> aroma.count('leather')
+0
+```
+
+### sort()와 sorted()
+
+#### sort(): 리스트 자체를 내부적으로 정렬한다.   
+
+```python
+>>> alphabet = ['f', 'c', 'a', 'b']
+>>> alphabet.sort()
+>>> alphabet
+['a', 'b', 'c', 'f']
+```
+
+
+#### sorted(): 리스트의 정렬된 복사본을 반환한다.
+
+```python
+>>> alphabet = ['f', 'c', 'a', 'b']
+>>> sorted_alphabet = sorted(alphabet)
+>>> sorted_alphabet
+['a', 'b', 'c', 'f']
+>>> alphabet
+>>> ['f', 'c', 'a', 'b']
+```
+
+> 기본은 오름차순으로 정렬하며, 역정렬은 `sort(reverse=True)` 를 사용한다.  
+> `sorted()`를 사용하면, 리스트의 원본은 변하지 않는다. 
+
+### len()
+리스트의 요소의 개수를 리턴한다.
+
+```python
+>>> aroma = ['lemon', 'cherry', 'oak']
+>>> len(aroma)
+3
+```
+
+
+> [처음 시작하는 파이썬](http://www.aladin.co.kr/shop/wproduct.aspx?ItemId=71434533) 참조 
 
 
 
